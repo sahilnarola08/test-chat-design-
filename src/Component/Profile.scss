@@ -1,0 +1,95 @@
+.profile_section {
+    width: 100%;
+    padding: 45px 70px 0px 70px;
+
+    .profile_header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        border-bottom: 2px solid #cccccc;
+        padding: 24px 0px;
+
+        p {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .profile_div {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50px;
+                object-fit: cover;
+            }
+
+            p {
+                font-size: 20px;
+                margin: 0;
+            }
+
+        }
+    }
+
+    .profile_content_div {
+        display: flex;
+
+
+        .profile_details {
+            margin: auto;
+            text-align: center;
+
+            img {
+                width: 262px;
+                height: 262px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .user_name {
+                text-align: center;
+                font-size: 24px;
+            }
+        }
+
+        .profile_content {
+            display: flex;
+            padding: 13px 5px;
+
+            span {
+                font-size: 26px;
+                color: #9A9A9A;
+            }
+
+            p {
+                font-size: 26px;
+                margin: 0;
+                color: #545454;
+            }
+
+
+        }
+
+        .Company {
+
+            color: #9A9A9A;
+            font-size: 24px;
+            text-align: center;
+            border-top: 2px solid #ccc;
+        }
+
+        .profile_details_right {
+
+            border-left: 2px solid #ccc;
+            margin-left: 37px;
+            padding: 0px 50px;
+        }
+
+        .address {
+            border: none;
+        }
+    }
+}
