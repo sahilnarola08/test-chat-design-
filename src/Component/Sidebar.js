@@ -6,25 +6,15 @@ import { useNavigate } from "react-router-dom";
 const Sidebar = () => {
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    navigate("Posts")
-  }
 
-  const handlechange = () => {
-    navigate("Gallery")
-  }
-
-  const handletodo = () => {
-    navigate("ToDo")
-  }
   return (
     <>
       <div className='sidebar_section'>
         <div className='sidebar_div'>
-          <a >Profile</a>
-          <a onClick={handleClick}>Posts</a>
-          <a onClick={handlechange}>Gallery</a>
-          <a onClick={handletodo}>ToDo</a>
+          <a onClick={() => navigate("/")}>Profile</a>
+          <a onClick={() => navigate("Posts")}>Posts</a>
+          <a onClick={() => navigate("Gallery")}>Gallery</a>
+          <a onClick={() => navigate("ToDo")}>ToDo</a>
         </div>
 
 
