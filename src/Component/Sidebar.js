@@ -3,6 +3,7 @@ import "./Sidebar.scss";
 import { useNavigate } from "react-router-dom";
 // import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 
+
 const Sidebar = () => {
   const navigate = useNavigate();
 
@@ -44,6 +45,42 @@ const Sidebar = () => {
             <img src={require("../assest/profile.jpg")} alt="" />
             <p>Ervin Howell</p>
           </div>
+        </div>
+
+      </div>
+
+      <div className='chat_box_div chat_div'>
+
+        <div className='chat_box'>
+          {/* <ChatBubbleOutlineIcon /> */}
+          <div className='chat_contact'>
+            <img src={require("../assest/profile.jpg")} alt="" />
+            <p>Ervin Howell</p>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: "#fff", borderLeft: "1px solid #2C65C8", borderRight: "1px solid #2C65C8" }}>
+
+          <div>
+            <div className='right'>
+              <p>lorem ipsum</p>
+            </div>
+            <div className='left'>
+              <p>lorem ipsum</p>
+            </div>
+            <div className='right'>
+              <p>lorem ipsum</p>
+            </div>
+            <div className='left'>
+              <p>lorem ipsum</p>
+            </div>
+            <div className='right'>
+              <p>lorem ipsum</p>
+            </div>
+          </div>
+
+          <input type="type" />
+
         </div>
 
       </div>

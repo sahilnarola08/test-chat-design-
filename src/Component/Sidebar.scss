@@ -35,6 +35,36 @@
     border-radius: 11px 11px 0px 0px;
     transition: 1s !important;
 
+    &.chat_div {
+        right: 20%;
+        bottom: -212px;
+
+        .right,
+        .left {
+            p {
+
+                background-color: #F1F1F1;
+                padding: 0px 10px;
+                width: fit-content;
+                display: block;
+            }
+        }
+
+        .right {
+            p {
+
+                margin-left: auto;
+            }
+        }
+
+        input {
+            width: 98%;
+            border: none;
+            border-top: 1px solid;
+
+        }
+    }
+
     &:hover {
         bottom: 0px;
     }
@@ -50,6 +80,10 @@
             font-size: 23px;
             margin: 0;
             padding: 15px 15px;
+        }
+
+        .chat_contact {
+            background-color: transparent;
         }
     }
 

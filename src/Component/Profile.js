@@ -1,20 +1,91 @@
 import React from 'react'
 import "./Profile.scss"
 import { useLocation } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import PropTypes from 'prop-types';
+import { useNavigate } from "react-router-dom";
+
+function SimpleDialog(props) {
+    const { onClose, selectedValue, open } = props;
+    const navigate = useNavigate();
+    const handleClose = () => {
+        onClose(selectedValue);
+    };
+
+    const handleListItemClick = (value) => {
+        onClose(value);
+    };
+
+    return (
+        <Dialog onClose={handleClose} open={open}>
+            <div className='dialog_section'>
+                <img src={require("../assest/profile.jpg")} alt="profile" className='profile_image' />
+                <p>Leanne Graham</p>
+                <span>Sincere@april.biz</span>
+
+                <div className='profile_name'>
+                    <img src={require("../assest/profile.jpg")} alt="profile" />
+                    <p>Clementine Bauch</p>
+                </div>
+
+                <div className='profile_name'>
+                    <img src={require("../assest/profile.jpg")} alt="profile" />
+                    <p>Clementine Bauch</p>
+                </div>
+
+                <button type="button" onClick={() => navigate("/")}>
+                    Sign Out
+                </button>
+            </div>
+
+        </Dialog>
+    );
+}
+SimpleDialog.propTypes = {
+    onClose: PropTypes.func.isRequired,
+    open: PropTypes.bool.isRequired,
+    selectedValue: PropTypes.string.isRequired,
+};
 
 const Profile = () => {
+    const [open, setOpen] = React.useState(false);
+    const [selectedValue, setSelectedValue] = React.useState();
+
+
     const location = useLocation();
     console.log('location', location);
 
     const data = location?.state?.val
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = (value) => {
+        setOpen(false);
+        setSelectedValue(value);
+    };
 
     return (
         <div className='profile_section'>
             <div className='profile_header'>
                 <p>Profile</p>
 
+
+                <SimpleDialog
+                    selectedValue={selectedValue}
+                    open={open}
+                    onClose={handleClose}
+                />
+
+
                 <div className='profile_div'>
-                    <img src={require("../assest/profile.jpg")} alt="profile" />
+
+                    <Button style={{ border: "none" }} variant="outlined" onClick={handleClickOpen}>
+                        <img src={require("../assest/profile.jpg")} alt="profile" />
+                    </Button>
+
                     <p>{data?.username}</p>
                 </div>
             </div>

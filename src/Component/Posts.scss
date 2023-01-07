@@ -9,3 +9,73 @@
         color: #54545421;
     }
 }
+
+.css-hz1bth-MuiDialog-container {
+    height: auto !important;
+    justify-content: end !important;
+    margin-top: 109px !important;
+}
+
+.dialog_section {
+    text-align: center;
+    width: 400px;
+    padding: 32px 0px;
+    border-radius: 34px;
+
+    .profile_image {
+        width: 116px;
+        height: 116px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 12px 0px;
+    }
+
+    p {
+        font-size: 24px;
+        margin: auto;
+    }
+
+    span {
+        font-size: 22px;
+        color: #9A9A9A;
+        margin-bottom: 17px;
+        display: block;
+    }
+
+    .profile_name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid #9A9A9A;
+        width: 70%;
+        margin: auto;
+        padding: 10px 0px;
+        cursor: pointer;
+
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            object-fit: cover;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    button {
+        display: block;
+        width: 131px;
+        height: 50px;
+        margin: auto;
+        border-radius: 50px;
+        background-color: #D55151;
+        color: #fff;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+
+
+    }
+}
